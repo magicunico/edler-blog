@@ -30,6 +30,7 @@
     "d3-scale": "^4.0.0",
     "del": "^6.0.0",
     "dotenv": "^8.2.0",
+    "elizabot": "^0.0.3",
     "fs-extra": "^9.1.0",
     "glob": "^7.1.6",
     "intersection-observer": "^0.12.0",

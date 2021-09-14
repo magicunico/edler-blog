@@ -1,52 +1,51 @@
 <script>
-    import StoryTime from "../../components/StoryTime.svelte";
-    import Clock from "../../components/Clock.svelte";
-    import BarChart from "../../components/BarChart.svelte";
-    import AlertButton from "../../components/AlertButton.svelte";
-    export let request, settings;
+	import Keypad from '../../components/Keypad.svelte'
+  import Movie from '../../components/Movie.svelte';
+  import Todos from '../../components/Todos.svelte';
+  import SafeQuestion from '../../components/SafeQuestion.svelte';
+  import GroupInput from '../../components/GroupInput.svelte';
+  import Links from '../../components/Links.svelte';
+  import ReactiveButton from '../../components/ReactiveButton.svelte';
+  import Eliza from '../../components/Eliza.svelte';
+  import Transitions from '../../components/Transitions.svelte';
+  import Gallery from '../../components/Gallery.svelte';
+  import TodosFun from '../../components/TodosFun.svelte';
 </script>
 
-<svelte:head>
-  <title>My short story</title>
-  <meta name="descriptionofthispage" content="My story" />
-  <link href="{settings.origin}{request.permalink}" rel="canonical" />
-</svelte:head>
+<Transitions hydrate-client={{}} />
+<Gallery hydrate-client={{}} />
 
-<StoryTime hydrate-client={{
-    title : 'Helpless',
-    lyrics : 'I have never been the type to try and grab the spotlight \n We were at a revel with some rebels on a hot night \n Laughin\' at my sister as she\'s dazzling the room\n Then you walked in and my heart went, \"Boom!\"',
-    author : 'Lin',
-    singer : 'Eliza',
-    movie : 'Hamilton musical'
+<Keypad hydrate-client={{value:''}} />
+
+<Movie hydrate-client={{}}/>
+
+<Todos hydrate-client={{ todos : [	
+  {done: false, text: 'finish Svelte tutorial' },
+{done: false, text: 'build an app' },
+{done: false, text: 'world domination' }
+]
 }}/>
 
-<Clock hydrate-client={{}} />
+<SafeQuestion hydrate-client={{questions: [{ id: 1, text: `Where did you go to school?` },
+{ id: 2, text: `What is your mother's name?` },
+{ id: 3, text: `What is another personal fact that an attacker could easily find with Google?` }]}}/>
 
-<BarChart hydrate-client={{
-  points:[
-    { year: 2222, birthrate: 11.1},
-		{ year: 2333, birthrate: 12.2 },
-		{ year: 2444, birthrate: 13.3 },
-		{ year: 2555, birthrate: 14.4 },
-		{ year: 2666, birthrate: 15.5 },
-		{ year: 2777, birthrate: 16.6 }
-  ]
-}} /> 
+<GroupInput hydrate-client={{
+  menu : [
+  'Cookies and cream',
+  'Mint choc chip',
+  'Raspberry ripple'],
+  flavours : ['Mint choc chip']}}/>
 
 
-<AlertButton hydrate-client={{
-  alertText: 'Prop',
-  buttonName: 'Click prop'
-  }}/>
+<Links hydrate-client={{cats : [
+  { id: 'J---aiyznGQ', name: 'Keyboard Cat' },
+  { id: 'z_AbfPXTKms', name: 'Maru' },
+  { id: 'OUtn3pvWmpg', name: 'Henri The Existential Cat' }
+]}}/>
 
+<ReactiveButton hydrate-client={{}} />
 
+<Eliza hydrate-client={{}} />
 
-<!-- <StoryTime hydrate-client={{}}/>
-<Clock hydrate-client={{}}/>
-<BarChart hydrate-client={{}}/> -->
-<!-- <AlertButton  hydrate-client={{}}/> -->
-
-<!-- <StoryTime />
-<Clock />
-<BarChart />
-<AlertButton /> -->
+<TodosFun hydrate-client={{}} />
