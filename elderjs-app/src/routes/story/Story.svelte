@@ -11,8 +11,9 @@
   import Gallery from '../../components/Gallery.svelte';
   import TodosFun from '../../components/TodosFun.svelte';
 </script>
-
+<!-- 
 <Transitions hydrate-client={{}} />
+
 <Gallery hydrate-client={{}} />
 
 <Keypad hydrate-client={{value:''}} />
@@ -21,14 +22,12 @@
 
 <Todos hydrate-client={{ todos : [	
   {done: false, text: 'finish Svelte tutorial' },
-{done: false, text: 'build an app' },
-{done: false, text: 'world domination' }
-]
-}}/>
+  {done: false, text: 'build an app' },
+  {done: false, text: 'world domination' }]}}/>
 
 <SafeQuestion hydrate-client={{questions: [{ id: 1, text: `Where did you go to school?` },
-{ id: 2, text: `What is your mother's name?` },
-{ id: 3, text: `What is another personal fact that an attacker could easily find with Google?` }]}}/>
+  { id: 2, text: `What is your mother's name?` },
+  { id: 3, text: `What is another personal fact that an attacker could easily find with Google?` }]}}/>
 
 <GroupInput hydrate-client={{
   menu : [
@@ -36,7 +35,6 @@
   'Mint choc chip',
   'Raspberry ripple'],
   flavours : ['Mint choc chip']}}/>
-
 
 <Links hydrate-client={{cats : [
   { id: 'J---aiyznGQ', name: 'Keyboard Cat' },
@@ -48,4 +46,28 @@
 
 <Eliza hydrate-client={{}} />
 
-<TodosFun hydrate-client={{}} />
+<TodosFun hydrate-client={{}} /> -->
+
+
+<!-- BH -->
+<Transitions/>
+
+<Gallery/>
+
+<Keypad/>
+
+<Movie/>
+
+<Todos/>
+
+<SafeQuestion/>
+
+<GroupInput/>
+
+<Links/>
+
+<ReactiveButton/>
+
+<Eliza/>
+
+<TodosFun/>
