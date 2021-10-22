@@ -13,6 +13,7 @@
 <h2>Insecurity questions</h2>
 
 <form on:submit|preventDefault={handleSubmit}>
+	<!-- svelte-ignore a11y-no-onchange -->
 	<select bind:value={selected} on:change="{() => answer = ''}">
 		{#each questions as question}
 			<option value={question}>

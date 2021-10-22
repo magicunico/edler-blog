@@ -2,11 +2,13 @@
 	export let scoops = 1;
 	export let flavours = [];
 
-	export let menu = [];
+	export let menu = ['Cookies and cream','Mint choc chip','Raspberry ripple'];
 
 	function join(flavours) {
 		if (flavours.length === 1) return flavours[0];
 		return `${flavours.slice(0, -1).join(', ')} and ${flavours[flavours.length - 1]}`;
+		console.log(flavours);
+		console.log(menu);
 	}
 </script>
 

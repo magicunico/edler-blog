@@ -11,7 +11,7 @@
   import Gallery from '../../components/Gallery.svelte';
   import TodosFun from '../../components/TodosFun.svelte';
 </script>
-<!-- 
+
 <Transitions hydrate-client={{}} />
 
 <Gallery hydrate-client={{}} />
@@ -29,12 +29,7 @@
   { id: 2, text: `What is your mother's name?` },
   { id: 3, text: `What is another personal fact that an attacker could easily find with Google?` }]}}/>
 
-<GroupInput hydrate-client={{
-  menu : [
-  'Cookies and cream',
-  'Mint choc chip',
-  'Raspberry ripple'],
-  flavours : ['Mint choc chip']}}/>
+<GroupInput hydrate-client={{}}/>
 
 <Links hydrate-client={{cats : [
   { id: 'J---aiyznGQ', name: 'Keyboard Cat' },
@@ -46,11 +41,11 @@
 
 <Eliza hydrate-client={{}} />
 
-<TodosFun hydrate-client={{}} /> -->
+<TodosFun hydrate-client={{}} />
 
 
 <!-- BH -->
-<Transitions/>
+<!-- <Transitions/>
 
 <Gallery/>
 
@@ -70,4 +65,4 @@
 
 <Eliza/>
 
-<TodosFun/>
+<TodosFun/> -->
