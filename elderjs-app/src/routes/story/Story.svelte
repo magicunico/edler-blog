@@ -10,17 +10,16 @@
   import Transitions from '../../components/Transitions.svelte';
   import Gallery from '../../components/Gallery.svelte';
   import TodosFun from '../../components/TodosFun.svelte';
+  import Form from '../../components/Form.svelte';
 </script>
 
-<Transitions hydrate-client={{}} />
+<!-- <Transitions hydrate-client={{}} /> -->
 
-<Gallery hydrate-client={{}} />
+<!-- <Gallery hydrate-client={{}} /> -->
 
-<Keypad hydrate-client={{value:''}} />
+<!-- <Keypad hydrate-client={{value:''}} /> -->
 
-<Movie hydrate-client={{}}/>
-
-<Todos hydrate-client={{ todos : [	
+<!-- <Todos hydrate-client={{ todos : [	
   {done: false, text: 'finish Svelte tutorial' },
   {done: false, text: 'build an app' },
   {done: false, text: 'world domination' }]}}/>
@@ -28,8 +27,6 @@
 <SafeQuestion hydrate-client={{questions: [{ id: 1, text: `Where did you go to school?` },
   { id: 2, text: `What is your mother's name?` },
   { id: 3, text: `What is another personal fact that an attacker could easily find with Google?` }]}}/>
-
-<GroupInput hydrate-client={{}}/>
 
 <Links hydrate-client={{cats : [
   { id: 'J---aiyznGQ', name: 'Keyboard Cat' },
@@ -41,7 +38,17 @@
 
 <Eliza hydrate-client={{}} />
 
-<TodosFun hydrate-client={{}} />
+<TodosFun hydrate-client={{}} /> -->
+
+<!-- <Form hydrate-client={{}}/> -->
+
+
+<Links hydrate-client={{cats : [
+  { id: 'J---aiyznGQ', name: 'Keyboard Cat' },
+  { id: 'z_AbfPXTKms', name: 'Maru' },
+  { id: 'OUtn3pvWmpg', name: 'Henri The Existential Cat' }
+]}}/>
+
 
 
 <!-- BH -->
