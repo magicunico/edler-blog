@@ -1,9 +1,7 @@
 <script>
 	import Keypad from '../../components/Keypad.svelte'
-  import Movie from '../../components/Movie.svelte';
   import Todos from '../../components/Todos.svelte';
   import SafeQuestion from '../../components/SafeQuestion.svelte';
-  import GroupInput from '../../components/GroupInput.svelte';
   import Links from '../../components/Links.svelte';
   import ReactiveButton from '../../components/ReactiveButton.svelte';
   import Eliza from '../../components/Eliza.svelte';
