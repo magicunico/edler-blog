@@ -1,5 +1,8 @@
 <script>
-	export let questions = [];
+	export let questions = [
+      { id: 1, text: `Where did you go to school?` },
+      { id: 2, text: `What is your dream job?` },
+      { id: 3, text: `What is another app you want to build with using hydration` }];
 
 	export let selected;
 
@@ -10,9 +13,10 @@
 	}
 </script>
 
-<h2>Insecurity questions</h2>
+<div class="SafeQuestionDiv">
+<h2>Questions</h2>
 
-<form on:submit|preventDefault={handleSubmit}>
+<form on:submit|preventDefault={handleSubmit} >
 	<!-- svelte-ignore a11y-no-onchange -->
 	<select bind:value={selected} on:change="{() => answer = ''}">
 		{#each questions as question}
@@ -31,6 +35,16 @@
 
 <p>selected question {selected ? selected.id : '[waiting...]'}</p>
 
+
+</div>
 <style>
-	input { display: block; width: 500px; max-width: 100%; }
+
+	.safeQuestionDiv{
+		width: 50%;
+	}
+
+	input { 
+		display: block; 
+		width: 50%; 
+		max-width: 50%; }
 </style>

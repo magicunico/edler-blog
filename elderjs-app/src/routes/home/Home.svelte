@@ -1,7 +1,7 @@
 <script>
   import HookDetail from '../../components/HookDetail.svelte';
-  import BlogTeaser from '../../components/BlogTeaser.svelte';
-  import Clock from '../../components/Clock.svelte';
+  // import BlogTeaser from '../../components/BlogTeaser.svelte';
+  // import Clock from '../../components/Clock.svelte';
   export let data, helpers, settings;
 
   // add permalinks to the hook list so we can link to the posts.
@@ -100,13 +100,13 @@
   </p>
 </div>
 
-<div class="blog">
+<!-- <div class="blog">
   <div class="entries">
     {#each data.markdown.blog as blog}
       <BlogTeaser {blog} {helpers} />
     {/each}
   </div>
-</div>
+</div> -->
 
 <div class="about">
   <h2>About This Template</h2>
@@ -189,9 +189,9 @@
       >.
     </p>
   </div>
-  <div class="right">
+  <!-- <div class="right">
     <Clock hydrate-client={{}} />
-  </div>
+  </div> -->
 </div>
 
 <h2>The Elder.js Hook Interface</h2>

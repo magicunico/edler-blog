@@ -67,7 +67,7 @@
 
 <style>
 	.container {
-		position: absolute;
+		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -81,7 +81,7 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
-		width: 52vmin;
+		width: 100%;
 		height: 76vmin;
 		border: 2vmin solid #ccc;
 		border-bottom-width: 10vmin;
@@ -94,13 +94,14 @@
 		text-transform: uppercase;
 		font-size: 5vmin;
 		margin: 0.2em 0 0.5em 0;
+		text-align: center;
 	}
 
 	.grid {
 		display: grid;
 		flex: 1;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(4, 1fr);
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(3, 1.5fr);
 		grid-gap: 2vmin;
 	}
 

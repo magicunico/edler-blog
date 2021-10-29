@@ -1,5 +1,8 @@
 <script>
-	export let todos = [];
+	export let todos = [	
+    {done: false, text: 'Prepare your workspace' },
+    {done: false, text: 'Make a coffee' },
+    {done: false, text: 'Turn on your favourite music'}];
 
 
 	function add() {

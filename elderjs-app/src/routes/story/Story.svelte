@@ -9,65 +9,148 @@
   import Gallery from '../../components/Gallery.svelte';
   import TodosFun from '../../components/TodosFun.svelte';
   import Form from '../../components/Form.svelte';
+  import AlertButton from '../../components/AlertButton.svelte'
 </script>
 
-<!-- <Transitions hydrate-client={{}} /> -->
 
-<!-- <Gallery hydrate-client={{}} /> -->
+<div class="app">
+<div class="wholeWidth">
+  <Form hydrate-client={{}}/>
+</div>
 
-<!-- <Keypad hydrate-client={{value:''}} /> -->
-
-<!-- <Todos hydrate-client={{ todos : [	
-  {done: false, text: 'finish Svelte tutorial' },
-  {done: false, text: 'build an app' },
-  {done: false, text: 'world domination' }]}}/>
-
-<SafeQuestion hydrate-client={{questions: [{ id: 1, text: `Where did you go to school?` },
-  { id: 2, text: `What is your mother's name?` },
-  { id: 3, text: `What is another personal fact that an attacker could easily find with Google?` }]}}/>
-
-<Links hydrate-client={{cats : [
-  { id: 'J---aiyznGQ', name: 'Keyboard Cat' },
-  { id: 'z_AbfPXTKms', name: 'Maru' },
-  { id: 'OUtn3pvWmpg', name: 'Henri The Existential Cat' }
-]}}/>
-
-<ReactiveButton hydrate-client={{}} />
-
-<Eliza hydrate-client={{}} />
-
-<TodosFun hydrate-client={{}} /> -->
-
-<!-- <Form hydrate-client={{}}/> -->
+<div class="wholeWidth">
+  <AlertButton hydrate-client={{}} />
+</div>
 
 
-<Links hydrate-client={{cats : [
-  { id: 'J---aiyznGQ', name: 'Keyboard Cat' },
-  { id: 'z_AbfPXTKms', name: 'Maru' },
-  { id: 'OUtn3pvWmpg', name: 'Henri The Existential Cat' }
-]}}/>
+<div class="wholeWidth">
+  <ReactiveButton hydrate-client={{}} />
+</div>
+
+<div class="wholeWidth">
+  <Todos hydrate-client={{}}/>
+</div>
+
+<div  class="wholeWidth">
+  <TodosFun hydrate-client={{}} /> 
+</div>
+
+<div  class="wholeWidth">
+  <Links hydrate-client={{}}/>
+</div>
+  
+<div class="wholeWidth">
+  <Transitions hydrate-client={{}} />
+</div>
+
+<div class="wholeWidth">
+  <Gallery hydrate-client={{}} />
+</div>
 
 
+<div>
+  <Eliza hydrate-client={{}} />
+</div>
+
+<div class="bottom">
+  <div class="leftBottom">
+    <Keypad hydrate-client={{}} />
+  </div>
+  <div class="rightBottom">
+    <SafeQuestion hydrate-client={{}}/>
+  </div>
+</div> 
+
+<!--
+
+<div class="wholeWidth">
+  <Form />
+</div>
+
+<div class="wholeWidth">
+  <AlertButton />
+</div>
+
+
+<div class="wholeWidth">
+  <ReactiveButton/>
+</div>
+
+<div class="wholeWidth">
+  <Todos />
+</div>
+
+<div  class="wholeWidth">
+  <TodosFun /> 
+</div>
+
+<div  class="wholeWidth">
+  <Links />
+</div>
+  
+<div class="wholeWidth">
+  <Transitions  />
+</div>
+
+<div class="wholeWidth">
+  <Gallery  />
+</div>
+
+
+<div>
+  <Eliza  />
+</div>
+
+<div class="bottom">
+  <div class="leftBottom">
+    <Keypad  />
+  </div>
+  <div class="rightBottom">
+    <SafeQuestion />
+  </div>
+</div> 
+
+
+
+
+
+
+
+
+
+ -->
 
 <!-- BH -->
-<!-- <Transitions/>
 
-<Gallery/>
 
-<Keypad/>
 
-<Movie/>
 
-<Todos/>
+</div>
+<style>
 
-<SafeQuestion/>
+  .app{
+    margin: auto;
+  }
 
-<GroupInput/>
+  .wholeWidth{
+    width: 100%;
+    margin-bottom: 1%;
+    position: relative;
+  }
 
-<Links/>
+  .bottom{
+    position: absolute;
+    width: 100%;
+    display: flex;
+  }
 
-<ReactiveButton/>
+  .leftBottom{
+    width: 50%;
+    margin: 0;
+  }
 
-<Eliza/>
-
-<TodosFun/> -->
+  .rightBottom{
+    width: 50%;
+    margin: 0;
+  }
+</style>

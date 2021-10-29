@@ -1,7 +1,7 @@
 <script>
 	import { createEventDispatcher } from 'svelte';
 
-	export let value;
+	export let value='';
 
 	const dispatch = createEventDispatcher();
 
@@ -14,7 +14,7 @@
         clear();
     }
 	
-    $: view = value ? value.replace(/\d(?!$)/g, '•') : 'enter y pin';
+    $: view = value ? value.replace(/\d(?!$)/g, '•') : 'enter your pin';
 
 </script>
 
@@ -37,6 +37,8 @@
 
 <style>
 	.keypad {
+		width: 50%;
+		margin: 0;
 		display: grid;
 		grid-template-columns: repeat(3, 5em);
 		grid-template-rows: repeat(4, 3em);

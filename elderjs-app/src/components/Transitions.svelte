@@ -11,7 +11,7 @@
 				const eased = elasticOut(t);
 
 				return `
-					transform: scale(${eased}) rotate(${eased * 1080}deg);
+					transform: scale(${eased}) rotate(${eased * 180}deg);
 					color: hsl(
 						${~~(t * 360)},
 						${Math.min(100, 1000 - 1000 * t)}%,
@@ -21,28 +21,43 @@
 		};
 	}
 </script>
+<div>
+	
+	
+	{#if visible}
+		<div class="centered" in:spin="{{duration: 8000}}" out:fade>
+			<span>Check out our gallery below!</span>
+		</div>
+	{/if}
 
-<label>
-	<input type="checkbox" bind:checked={visible}>
-	visible
-</label>
-
-{#if visible}
-	<div class="centered" in:spin="{{duration: 8000}}" out:fade>
-		<span>transitions!</span>
+	<div>
+		<label class="transitionLabel" >
+			<input type="checkbox" bind:checked={visible}>
+			Check it out
+		</label>
 	</div>
-{/if}
+	
 
+
+</div>
 <style>
+
+	.transitionLabel{
+		position: relative;
+		padding-bottom: 2%;
+	}
+
 	.centered {
-		position: absolute;
+		padding-bottom: 5px;
+		margin-top: 100px;
+		position: relative;
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%,-50%);
 	}
 
 	span {
-		position: absolute;
+		position: relative;
 		transform: translate(-50%,-50%);
 		font-size: 4em;
 	}

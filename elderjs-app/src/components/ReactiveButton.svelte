@@ -2,7 +2,7 @@
 	export let count=0;
 
 	$: if (count >= 10) {
-		alert(`count is dangerously high!`);
+		alert(`Okay!`);
 		count = 9;
 	}
 
@@ -12,5 +12,5 @@
 </script>
 
 <button on:click={handleClick}>
-	Clicked {count} {count === 1 ? 'time' : 'times'}
+	On scale on 1-10 how ready are you? : {count} {count <8 ? '..not enough' : '..close'}
 </button>
